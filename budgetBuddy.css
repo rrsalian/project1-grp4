@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;    
+}
+
+body {
+    width:100%;
+    height: 100vh;
+}
+
+header {
+    color: #3e3e3e;
+    /* background-color: #00a2db; */
+    padding:0;
+    height: 10%;
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    background-image: linear-gradient(#cee7f1, #e6eef2);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#allAround {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+    box-sizing: border-box;
+}
+
+h1 {
+    background-color: #f0f0f0;
+    color: #00a2db;    
+    text-align: center;
+    animation: fadeIn 5s;
+    height:10%; 
+
+}
+
+#desktopLayout {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:75%;
+    width:100%;
+}
+
+#budgetinput {
+    border-radius: 50px;
+    background-color: #cee7f1;
+    width: 80%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#expenses {
+    border-radius: 50px;
+    width: 80%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;    
+    padding: 10px;
+    margin: 10px;
+    background-image: linear-gradient(#bbc9b4, #ced4cd);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#data {
+    border-radius: 50px;
+    width: 80%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-image: linear-gradient(#f5be8a, #eaddc6);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    text-align: center;
+}
+
+button {
+    background-color: #599bff;
+    color: #f5f5f5;
+    height: 25px;
+    width: 100px;
+    border-radius: 35px;
+    border: 1px solid #599bff;
+    margin-left: 10px;
+}
+
+.delete-btn {
+    width:20px;
+    border-radius: 5px;
+}
+
+#expenseText {
+    height: 25px;
+    width: 125px;
+}
+
+input {
+    height: 25px;
+    width: 100px;
+    margin: 10px;
+    border: 1px solid grey;
+    border-radius: 5%;
+    text-align: center;
+    
+}
+
+#history {
+    display:flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    height: 300px;
+    align-content: center;
+}
+
+#details {
+    display:flex;
+    flex-direction: column;
+    width:100%;
+}
+
+#ul {
+    width:50%;
+    justify-content: center;
+}
+
+.liItem {
+    list-style-type: none;
+    text-align: left;
+    padding: 5px;
+    background-color: rgb(114, 143, 139);
+    width:50%;
+    border: 1px solid greenyellow;
+    box-sizing: border-box;
+    border-radius: 5%;
+    margin-left:10px;
+}
+
+
+#piechart {    
+    width: 50%;
+    height:300px;
+}
+
+label {
+    display: inline-block;
+    align-items: center;
+    padding:5px;
+    padding-left:15px;
+    padding-right:5px;
+}
+
+#error_msg_expense, #error_msg_budget, #error_msg_history {
+    color: red;
+}
+
+#error_msg_history {
+    width:50%;
+    height:15%;
+    padding-left: 10px;
+}
+
+#budget, #expense, #balance {
+    margin:0;
+    padding:0;
+    border:0;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    header {
+        height: 75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #desktopLayout {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding:10px;
+        height: 50%;
+    }
+
+    #allAround {
+        height: 100vh;
+        width:100%;
+    }    
+
+    #budgetinput,
+    #expenses,
+    #data {
+        margin: 1%;
+        height: 50%;
+        width: 32%;
+        padding:0;
+        justify-content: center;
+        align-items:center;        
+        border: 0;
+        margin:0;
+    }
+
+
+}

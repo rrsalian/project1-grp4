@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Buddy</title>
+    <link rel="stylesheet" href="budgetBuddy.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap" rel="stylesheet">
+    <title>Budget Buddy</title>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript"></script>
+</head>
+
+<body id="main">
+    <header>
+        Budget Buddy
+    </header>
+    <section id="allAround">        
+        <h1>Welcome to Budget Buddy!</h1>        
+        <section id="desktopLayout">
+            <section id="budgetinput">
+                <div>
+                    <p id="error_msg_budget"></p>
+                    <label>Enter Weekly Budget</label>
+                    <input id="budgetAmount" name="budgetAmount" type="number">
+                    <button class="addBudget" name="Budget" value="button">Add Budget</button>
+                </div>
+            </section>
+            <section id="expenses">
+                <div>
+                    <p id="error_msg_expense"></p>
+                    <label for="expenseText">What are you purchasing?</label>
+                    <select name="expenseText" id="expenseText">
+                        <option value="Entertainment" selected="selected">Entertainment</option>
+                        <option value="Food">Food</option>
+                        <option value="Clothing">Clothing</option>
+                        <option value="Bills">Bills</option>
+                        <label for="expenseAmount">Amount</label>
+                        <input id="expenseAmount" name="expenseAmount" type="number" />
+                        <button class="addExpense" name="Expense" value="buttom">Add Expense</button>
+
+                </div>
+            </section>
+
+            <section id="data">
+                <div id="sumBudget">
+                    <label for="budget">Budget</label>
+                    <input id="budget" name="budget" type="number" readonly />
+                </div>
+                <div id="sumExpense">
+                    <label for="expense">Expense</label>
+                    <input id="expense" name="expense" type="number" readonly />
+                </div>
+                <div id="sumBalance">
+                    <label for="balance">Balance</label>
+                    <input id="balance" name="balance" type="number" readonly />
+                </div>
+            </section>
+        </section>
+
+        <section id="history">
+            <div id="details">
+                <p id="error_msg_history"></p>
+                <ul id="list" class="list"></ul>
+            </div>
+            <div id="piechart"></div>
+        </section>
+
+        <footer>
+
+        </footer>
+        <script src="./budgetClass.js"></script>
+        <script src="./budgetBuddy.js"></script>
+        <script src="https://www.gstatic.com/charts/loader.js"></script>
+</body>
+
+</html>
