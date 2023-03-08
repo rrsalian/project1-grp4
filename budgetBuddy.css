@@ -142,22 +142,25 @@ input {
     width:100%;
 }
 
-#ul {
-    width:100%;
+
+#list {
+    width:100%;    
     justify-content: center;
+    align-items: center;    
 }
+
 
 .liItem {
     list-style-type: none;
     text-align: left;
     padding: 5px;
-    background-color: #f9dd94;
-    width:25%;    
+    background-color: #f9dd94;    
     border: 1px solid greenyellow;
     box-sizing: border-box;
     border-radius: 5%;
     margin-left:10px;
-    width:80%;
+    width:100%;
+    height:40%;
     border-style:outset;
 }
 
@@ -189,6 +192,12 @@ label {
     margin:0;
     padding:0;
     border:0;
+}
+
+#piechart {
+    width:100%;
+    height: 100%;
+    justify-content: left;
 }
 
 @keyframes fadeIn {
@@ -264,12 +273,6 @@ label {
     .liItem {        
         width:100%;
         height:12%;        
-    }
-
-    #piechart {
-        width:100%;
-        height: 100%;
-        justify-content: right;
-    }
+    }    
 
 }
