@@ -34,8 +34,8 @@
 
             li = document.createElement('li');
             li.classList.add('liItem');
-
-            li.innerHTML = `Budget ${transaction.amount} <button class="delete-btn" value=${transaction.id}>X</button>`;
+            let text = genLiText(e.target.name,18);
+            li.innerHTML = `${text} ${transaction.amount} <button class="delete-btn" value=${transaction.id}>X</button>`;
             list.appendChild(li);
             document.getElementById('budgetAmount').value = null;  // blank out the Budget Amount input after changes are posted          
         }
@@ -79,7 +79,8 @@
 
             li = document.createElement('li');
             li.classList.add('liItem');
-            li.innerHTML = `${transaction.text} ${transaction.amount} <button class="delete-btn" value=${transaction.id}>X</button>`;
+            let text = genLiText(transaction.text,15)
+            li.innerHTML = `${text} ${transaction.amount} <button class="delete-btn" value=${transaction.id}>X</button>`;
             list.appendChild(li);
 
             document.getElementById('expenseAmount').value = null;
@@ -92,7 +93,7 @@
         if (e.target.className === 'delete-btn') {
             const arr = e.target.parentElement.innerHTML.split(' ');
 
-            if (arr[0] === "Budget" && myBudget.balance - +arr[1] <= (0.1 * myBudget.budget))
+            if (arr[0].startsWith("Budget") && myBudget.balance - +arr[1] <= (0.1 * myBudget.budget))
                 document.getElementById("error_msg_history").innerHTML =
                     "<span>Error: Balance should be greater than 10% of the total Budget </span>";
             else {
@@ -106,6 +107,16 @@
 
         };
     })
+
+    function genLiText(text,num) {
+
+        for (let i=1; i<num; i++ ){
+            if (text.length === num)
+            return text;
+            text = text + "\u00A0";
+        }
+        return text;
+    }
 
     // get array list of expense categories from the select input
     function getExpenseOptions() {

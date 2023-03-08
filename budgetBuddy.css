@@ -14,7 +14,7 @@ header {
     color: #3e3e3e;
     /* background-color: #00a2db; */
     padding:0;
-    height: 10%;
+    height: 7%;
     font-weight: bold;
     font-size: 30px;
     text-transform: uppercase;
@@ -25,6 +25,7 @@ header {
     justify-content: center;
     align-items: center;
 }
+
 
 #allAround {
     display: flex;
@@ -42,8 +43,7 @@ h1 {
     color: #00a2db;    
     text-align: center;
     animation: fadeIn 5s;
-    height:10%; 
-
+    height:7%;
 }
 
 #desktopLayout {
@@ -107,8 +107,10 @@ button {
 }
 
 .delete-btn {
-    width:20px;
-    border-radius: 5px;
+    width:15px;
+    height:19px;
+    border-radius:5px;    
+    text-align: center;
 }
 
 #expenseText {
@@ -122,17 +124,16 @@ input {
     margin: 10px;
     border: 1px solid grey;
     border-radius: 5%;
-    text-align: center;
-    
+    text-align: center;    
 }
 
 #history {
     display:flex;
     width: 100%;
-    flex-direction: row;
-    justify-content: center;
-    height: 300px;
-    align-content: center;
+    flex-direction:row;
+    justify-content:center;
+    height: 100%;
+    align-content: left;
 }
 
 #details {
@@ -142,7 +143,7 @@ input {
 }
 
 #ul {
-    width:50%;
+    width:100%;
     justify-content: center;
 }
 
@@ -150,18 +151,20 @@ input {
     list-style-type: none;
     text-align: left;
     padding: 5px;
-    background-color: rgb(114, 143, 139);
-    width:50%;
+    background-color: #f9dd94;
+    width:25%;    
     border: 1px solid greenyellow;
     box-sizing: border-box;
     border-radius: 5%;
     margin-left:10px;
+    width:80%;
+    border-style:outset;
 }
 
 
 #piechart {    
     width: 50%;
-    height:300px;
+    height:300px;    
 }
 
 label {
@@ -177,9 +180,9 @@ label {
 }
 
 #error_msg_history {
-    width:50%;
+    width:100%;
     height:15%;
-    padding-left: 10px;
+    padding-left: 5%;
 }
 
 #budget, #expense, #balance {
@@ -200,11 +203,15 @@ label {
 
 
 @media screen and (min-width: 768px) {
-    header {
-        height: 75px;
+    header { 
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    #allAround {
+        height: 100vh;
+        width:100%;
     }
 
     #desktopLayout {
@@ -212,26 +219,57 @@ label {
         flex-direction: row;
         justify-content: space-around;
         padding:10px;
-        height: 50%;
+        height: 100%;
     }
-
-    #allAround {
-        height: 100vh;
-        width:100%;
-    }    
 
     #budgetinput,
     #expenses,
     #data {
         margin: 1%;
-        height: 50%;
-        width: 32%;
-        padding:0;
+        height: 70%;
+        width: 31%;
+        padding:0;        
         justify-content: center;
-        align-items:center;        
-        border: 0;
+        align-items:center;
+        border:0;
         margin:0;
     }
 
+    #history {       
+        align-content: center;
+        flex-direction: row;
+        justify-content: center;
+        align-items: left;
+        height: 100%;
+        width:100%;        
+    }
+
+    #details {
+        width:50%;
+    }
+
+    #error_msg_history {
+        height:15%;
+        width: 100%;
+        padding:5px;
+    }
+
+    #list {
+        width:100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .liItem {        
+        width:100%;
+        height:12%;        
+    }
+
+    #piechart {
+        width:100%;
+        height: 100%;
+        justify-content: right;
+    }
 
 }
